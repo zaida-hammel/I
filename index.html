@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <!-- ICS2O-UnitX-YY-HTML-... -->
 <html lang="en-ca">
-  head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="My first Slider" />
+    <meta name="description" content="Order a Pizza" />
     <meta name="keywords" content="mths, ics2o" />
     <meta name="author" content="Zaida Hammel" />
     <meta name="theme-color" content="#FFFFFF" />
-    <title>My first Slider</title>
+    <title>Order a Pizza</title>
     <link rel="canonical" href="https://zaida-hammel.github.io/ICS2O-Unit5-01-HTML/" />
     <link rel="manifest" href="/ICS2O-Unit5-01-HTML/manifest.webmanifest" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -31,19 +31,34 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Webpage header text here</span>
+          <span class="mdl-layout-title">Order a Pizza</span>
         </div>
       </header>
       <main class="mdl-layout__content">
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+            <label class="mdl-textfield__label" for="sample2">amount of pizzas</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+            <label class="mdl-textfield__label" for="sample2">toppings</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
         <!-- Raised button with ripple -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="myButtonClicked()"
         >
-          Click here
+          Calculate 
         </button>
-        <!-- basic text -->
-        <div id="hello-world"></div>
+
       </main>
     </div>
   </body>
