@@ -24,10 +24,10 @@ function pizzaOrder() {
   var extraLargePizza = document.getElementById("extraLargePizza");
 
   if (largePizza.checked == true) {
-    price = 6.00;
+    price = 6.0;
     document.getElementById("s_result").innerHTML = "Large";
   } else if (extraLargePizza.checked == true) {
-    price = 10.00;
+    price = 10.0;
     document.getElementById("s_result").innerHTML = "Extra large";
   }
 
@@ -39,7 +39,7 @@ function pizzaOrder() {
   var topping4 = document.getElementById("topping4");
 
   if (topping1.checked == true) {
-    topping = 1.00;
+    topping = 1.0;
     document.getElementById("t_options").innerHTML = "1 Topping";
   }
 
