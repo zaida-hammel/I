@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<!-- ICS2O-UnitX-YY-HTML-... -->
+<!--ICS2O-Assignment4-HTML-->
 <html lang="en-ca">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Order a Pizza" />
-    <meta name="keywords" content="mths, ics2o" />
-    <meta name="author" content="Zaida Hammel" />
+    <meta charset="utf-8">
+    <meta name="description" content="Calculates a Pizza order">
+    <meta name="keywords" content="mths, ics2o">
+    <meta name="author" content="Ava Venturino">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#FFFFFF" />
-    <title>Order a Pizza</title>
-    <link rel="canonical" href="https://zaida-hammel.github.io/ICS2O-Unit5-01-HTML/" />
-    <link rel="manifest" href="/ICS2O-Unit5-01-HTML/manifest.webmanifest" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <title>Ordering Pizza, with JS</title>
+    <link rel="canonical" href="https://zaida-hammel.github.io/ICS2O-Assignment4-HTML/" />
+    <link rel="manifest" href="/ICS2O-Assignment4-HTML/manifest.webmanifest" />
+    <link rel="stylesheet" href="./css/style.css" /> 
     <!-- None blocking for Lighthouse report -->
     <!-- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></noscript>
@@ -21,44 +21,55 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   </head>
   <body>
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("./js/sw.js");
-      }
-    </script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.teal-green.min.css"></script>
     <script src="./js/script.js"></script>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Order a Pizza</span>
+          <span class="mdl-layout-title">Ordering Pizza, with JS</span>
         </div>
       </header>
       <main class="mdl-layout__content">
-        <!-- Numeric Textfield -->
-        <form action="#">
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
-            <label class="mdl-textfield__label" for="sample2">amount of pizzas</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-        <!-- Numeric Textfield -->
-        <form action="#">
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
-            <label class="mdl-textfield__label" for="sample2">toppings</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
+          <h5>Choose a size f pizza you would like:</h5>
+          <!--Radio Buttons-->
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Large">
+        <input checked class="mdl-radio__button" id="largePizza" name="size" type="radio"
+   value="Large">
+        <span class="mdl-radio__label">Large Pizza ($6.00)</span>
+        </label>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="ExtraLarge">
+        <input class="mdl-radio__button" id="extraLargePizza" name="size" type="radio" value="ExtraLarge">
+        <span class="mdl-radio__label">Extra Large Pizza ($10.00)</span>
+        </label>
+        <p></p>
+          <h5>Choose an amount of toppings you would like:</h5>
+          <!--Radio Buttons-->
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="topping1">
+        <input checked class="mdl-radio__button" id="topping1" name="toppings" type="radio"
+   value="topping1">
+        <span class="mdl-radio__label">1 Topping ($1.00)</span>
+        </label>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="topping2">
+        <input class="mdl-radio__button" id="topping2" name="toppings" type="radio" value="topping2">
+        <span class="mdl-radio__label">2 Toppings ($1.75)</span>
+        </label>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="topping3">
+        <input checked class="mdl-radio__button" id="topping3" name="toppings" type="radio"
+   value="topping3">
+        <span class="mdl-radio__label">3 Toppings ($2.50)</span>
+        </label>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="topping4">
+        <input class="mdl-radio__button" id="topping4" name="toppings" type="radio" value="topping4">
+        <span class="mdl-radio__label">4 Toppings ($3.35)</span>
+        </label>
+          <p></p>
+          <br>
+          <br>
         <!-- Raised button with ripple -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()"
-        >
-          Calculate 
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="pizzaOrder()">
+          Check out
         </button>
-
+        <div id="answers"></div>
       </main>
     </div>
   </body>
