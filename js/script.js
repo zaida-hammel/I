@@ -31,7 +31,6 @@ function myButtonClicked() {
   
   //process
   if (largePizza.checked == true) {
-<<<<<<< HEAD
     pizzaPrice = 6.0
     document.getElementById("largePizza").innerHTML = "Large Pizza"
   } else if (extraLargePizza.checked == true)
@@ -50,55 +49,12 @@ function myButtonClicked() {
   } else {
       toppingPrice = 3.35 
       document.getElementById("topping4").innerHTML = "Four Toppings"
-=======
     price = 6.0;
-    document.getElementById("s_result").innerHTML = "Large";
-  } else if (extraLargePizza.checked == true) {
-    price = 10.0;
-    document.getElementById("s_result").innerHTML = "Extra large";
-  }
 
-  document.getElementById("p_result").innerHTML = "$" + price;
 
-  var topping1 = document.getElementById("topping1");
-  var topping2 = document.getElementById("topping2");
-  var topping3 = document.getElementById("topping3");
-  var topping4 = document.getElementById("topping4");
-
-  if (topping1.checked == true) {
-    topping = 1.0;
-    document.getElementById("t_options").innerHTML = "1 Topping";
-  }
-
-  if (topping2.checked == true) {
-    topping = 1.75;
-    document.getElementById("t_options").innerHTML = "2 Toppings";
->>>>>>> origin/main
-  }
   //output
   tax = (pizzaPrice + toppingPrice) * 0.13
   finalPrice = tax + (pizzaPrice + toppingPrice)
 
-<<<<<<< HEAD
   document.getElementById("answers").innerHTML = "Your pizza will be $" + finalPrice.toFixed(2)
 }
-=======
-  if (topping3.checked == true) {
-    topping = 2.5;
-    document.getElementById("t_options").innerHTML = "3 Toppings";
-  }
-
-  if (topping4.checked == true) {
-    topping = 3.35;
-    document.getElementById("t_options").innerHTML = "4 Toppings";
-  }
-
-  document.getElementById("t_result").innerHTML = "$" + top;
-
-  tax = (price + topping) * 0.13;
-  total = tax + (price + topping);
-
-  document.getElementById("answers").innerHTML =
-    "Your Current Total is $ " + total.toFixed(2);
-}
->>>>>>> origin/main
