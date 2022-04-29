@@ -31,19 +31,19 @@ function myButtonClicked() {
 
   //process
   if (largePizza.checked == true) {
-    pizzaPrice = 6.00;
+    pizzaPrice = 6.0;
     document.getElementById("largePizza").innerHTML = "Large Pizza";
   } else if (extraLargePizza.checked == true) pizzaPrice = 10.0;
   document.getElementById("largePizza").innerHTML = "Extra Large Pizza";
 
   if (topping1.checked == true) {
-    toppingPrice = 1.00;
+    toppingPrice = 1.0;
     document.getElementById("topping1").innerHTML = "One Topping";
   } else if (topping2.checked == true) {
     toppingPrice = 1.75;
     document.getElementById("topping2").innerHTML = "Two Toppings";
   } else if (topping3.checked == true) {
-    toppingPrice = 2.50;
+    toppingPrice = 2.5;
     document.getElementById("topping3").innerHTML = "Three Toppings";
   } else {
     toppingPrice = 3.35;
