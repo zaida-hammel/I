@@ -14,55 +14,45 @@ if (navigator.serviceWorker) {
 /**
  * Input
  */
-function pizzaOrder() {
-  var price = 0;
-  var top = 0;
-  var total = 0;
-  var tax = 0;
+function myButtonClicked() {
+  //input
+  const largePizza = document.getElementById("largePizza").checked
+  const extraLargePizza = document.getElementById("extraLargePizza").checked
+  const topping1 = document.getElementById("topping1").checked
+  const topping2 = document.getElementById("topping2").checked
+  const topping3 = document.getElementById("topping3").checked
+  const topping4 = document.getElementById("topping4").checked
 
-  var largePizza = document.getElementById("largePizza");
-  var extraLargePizza = document.getElementById("extraLargePizza");
-
+  const pizzaPrice = 0;
+  const toppingPrice = 0;
+  
+  const tax = 0;
+  const totalPrice = 0;
+  
+  //process
   if (largePizza.checked == true) {
-    price = 6.00;
-    document.getElementById("s_result").innerHTML = "Large";
-  } else if (extraLargePizza.checked == true) {
-    price = 10.00;
-    document.getElementById("s_result").innerHTML = "Extra large";
-  }
-
-  document.getElementById("p_result").innerHTML = "$" + price;
-
-  var topping1 = document.getElementById("topping1");
-  var topping2 = document.getElementById("topping2");
-  var topping3 = document.getElementById("topping3");
-  var topping4 = document.getElementById("topping4");
-
-  if (topping1.checked == true) {
-    topping = 1.00;
-    document.getElementById("t_options").innerHTML = "1 Topping";
-  }
-
-  if (topping2.checked == true) {
-    topping = 1.75;
-    document.getElementById("t_options").innerHTML = "2 Toppings";
-  }
-
-  if (topping3.checked == true) {
-    topping = 2.5;
-    document.getElementById("t_options").innerHTML = "3 Toppings";
-  }
-
-  if (topping4.checked == true) {
-    topping = 3.35;
-    document.getElementById("t_options").innerHTML = "4 Toppings";
-  }
-
-  document.getElementById("t_result").innerHTML = "$" + top;
-
-  tax = (price + topping) * 0.13;
-  total = tax + (price + topping);
-
-  document.getElementById("answers").innerHTML =
-    "Your Current Total is $ " + total.toFixed(2);
+    pizzaPrice = 6.0
+    document.getElementById("largePizza").innerHTML = "Large Pizza"
+  } else if (extraLargePizza.checked == true)
+    pizzaPrice = 10.0
+      document.getElementById("largePizza").innerHTML = "Extra Large Pizza"
 }
+
+if (topping1.checked == true) {
+  toppingPrice = 1.0
+  document.getElementById("topping1").innerHTML = "One Topping"
+} else if (topping2.checked == true) {
+    toppingPrice = 1.75
+    document.getElementById("topping2").innerHTML = "Two Toppings"
+} else if (topping3.checked == true) {
+    toppingPrice = 2.50
+    document.getElementById("topping3").innerHTML = "Three Toppings"
+} else {
+    toppingPrice = 3.35 
+    document.getElementById("topping4").innerHTML = "Four Toppings"
+}
+//output
+tax = (pizzaPrice + toppingPrice) * 0.13
+finalPrice = tax + (pizzaPrice + toppingPrice)
+
+document.getElementById("answers").innerHTML = "Your pizza will be $" + finalPrice.toFixed(2) 
