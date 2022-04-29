@@ -57,4 +57,5 @@ function myButtonClicked() {
   finalPrice = tax + (pizzaPrice + toppingPrice)
 
   document.getElementById("answers").innerHTML = "Your pizza will be $" + finalPrice.toFixed(2)
+  }
 }
