@@ -30,19 +30,19 @@ function myButtonClicked() {
   var totalPrice = 0;
 
   //process
-  if (largePizza.checked == true) {
+  if (largePizza == true) {
     pizzaPrice = 6.0;
     document.getElementById("largePizza").innerHTML = "Large Pizza";
-  } else if (extraLargePizza.checked == true) pizzaPrice = 10.0;
+  } else if (extraLargePizza == true) pizzaPrice = 10.0;
   document.getElementById("largePizza").innerHTML = "Extra Large Pizza";
 
-  if (topping1.checked == true) {
+  if (topping1 == true) {
     toppingPrice = 1.0;
     document.getElementById("topping1").innerHTML = "One Topping";
-  } else if (topping2.checked == true) {
+  } else if (topping2 == true) {
     toppingPrice = 1.75;
     document.getElementById("topping2").innerHTML = "Two Toppings";
-  } else if (topping3.checked == true) {
+  } else if (topping3 == true) {
     toppingPrice = 2.5;
     document.getElementById("topping3").innerHTML = "Three Toppings";
   } else {
