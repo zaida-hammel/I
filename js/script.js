@@ -17,8 +17,8 @@ if (navigator.serviceWorker) {
 function myButtonClicked() {
   //input
   const largePizza = document.getElementById("largePizza").checked;
-  const extraLargePizza = document.getElementById("extraLargePizza").checked;
-  const topping1 = document.getElementById("topping1").checked;
+  const extraLargePizza = document.getElementById("extraLargePizza".checked);
+  const topping1 = document.getElementById("topping1".checked);
   const topping2 = document.getElementById("topping2").checked;
   const topping3 = document.getElementById("topping3").checked;
   const topping4 = document.getElementById("topping4").checked;
